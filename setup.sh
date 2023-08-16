@@ -26,11 +26,8 @@ brew install git
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 ### PowerLevel10K Theme
-git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
-echo 'ZSH_THEME="powerlevel10k/powerlevel10k"' >> ~/.zshrc
-source ~/.zshrc
-p10k configure
-curl https://raw.githubusercontent.com/josean-dev/dev-environment-files/main/coolnight.itermcolors --output ~/Downloads/coolnight.itermcolors
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >> ~/.zshrc
 
 ### ZSH Plugins
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
@@ -38,81 +35,79 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 echo 'add plugins=(git zsh-autosuggestions zsh-syntax-highlighting web-search)' >> ~/.zshrc
 source ~/.zshrc
 
-## DrawIO
+## Setup Editors
 
+### VIM
+cat $CURRENT_DIR/tuned_vim.txt > $HOME/.vimrc
+
+### NANO
+cat $CURRENT_DIR/tuned_nano.txt > $HOME/.nanorc
+
+
+## DrawIO
+brew install --cask drawio
 
 ## KeePassX
+brew install --cask keepassx
 
 
-## Browser
-
+# Browsers
 
 ### Firefox Developer Edition
 
-
 ### Brave
+brew install --cask brave-browser
 
 
-# Setup dev tools
-
+# Setup DEV tools
 
 ## SDKMAN
-
+curl -s "https://get.sdkman.io" | bash
+source "$HOME/.sdkman/bin/sdkman-init.sh"
+sdk version
 
 ### OpenJDKs
-
+sdk install java 11.0.20-amzn
 
 ## NVM
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.4/install.sh | bash
+wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.4/install.sh | bash
+echo 'export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm' >> ~/.zshrc
+source ~/.zshrc
 
+### Node Versions
+nvm install 12
 
-## Docker Desktop
+## Docker Desktop (https://docs.docker.com/desktop/install/mac-install/)
+softwareupdate --install-rosetta
+brew install --cask docker
 
-
-## IDEAS
-
+## IDEAs / UIs
 
 ### JETBRAINS Toolbox
-
+https://formulae.brew.sh/cask/jetbrains-toolbox
 
 ### Visual Studio Code
-
+brew install --cask visual-studio-code
 
 ## MongoDB Compass
-
+brew install --cask mongodb-compass
 
 ## DBeaver
+brew install --cask dbeaver-community
 
+## PGAdmin
+brew install postgresql@14
+brew install --cask pgadmin4
 
 ## Postman
-
+brew install --cask postman
 
 ## JasperStudio
-
+brew install --cask tibco-jaspersoft-studio
 
 # Setup hacking tools
 
-
-# Setup work
-
-
-## SLACK
-
-
-## Zoom
-
-
-## Microsoft Office
-
-
-### TEAMS
-
-
-### EXCEL
-
-
-### WORD
-
-
-### POWERPOINT
-
-
+## SQLMAP
+brew install sqlmap
