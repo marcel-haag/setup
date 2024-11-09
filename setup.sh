@@ -35,6 +35,9 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 echo 'add plugins=(git zsh-autosuggestions zsh-syntax-highlighting web-search)' >> ~/.zshrc
 source ~/.zshrc
 
+## Incase you want to redo the theme config you can use the following command
+# p10k configure
+
 ## Setup Editors
 
 ### VIM
@@ -104,6 +107,9 @@ brew install --cask pgadmin4
 ## Postman
 brew install --cask postman
 
+## Insomnia
+brew install --cask insomnia
+
 ## JasperStudio
 brew install --cask tibco-jaspersoft-studio
 
@@ -111,3 +117,14 @@ brew install --cask tibco-jaspersoft-studio
 
 ## SQLMAP
 brew install sqlmap
+
+## Ffuf
+brew install ffuf
+
+## Others
+brew install nmap
+brew install metasploit
+brew install exiftool
+brew install base64
+brew install curl
+brew install jq
