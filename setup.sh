@@ -55,7 +55,6 @@ brew install --cask keepassx
 
 
 # Browsers
-
 ### Firefox Developer Edition
 
 ### Brave
@@ -104,27 +103,72 @@ brew install --cask dbeaver-community
 brew install postgresql@14
 brew install --cask pgadmin4
 
-## Postman
+## APIs (Postman & Insomnia)
 brew install --cask postman
-
-## Insomnia
 brew install --cask insomnia
 
 ## JasperStudio
 brew install --cask tibco-jaspersoft-studio
 
+## Other utils
+brew install --cask devtoys
+brew install --cask raycast
+brew install --cask latest
+brew install only-switch
+brew install --cask alt-tab
+brew install MonitorControl
+brew install nikolaeu/numi/numi-cli
+brew install bash-completion # (bash completion)
+brew install --cask rar
+
 # Setup hacking tools
+# Checkout
+# https://www.techrepublic.com/article/homebrew-how-to-install-exploit-tools-on-macos/
+# To install responsively, run:
+#  brew install --cask responsively
 
-## SQLMAP
-brew install sqlmap
+## SQLi
+brew install sqlmap --cask responsively
 
-## Ffuf
+## XSS (Dalfox better than XSStrike?)
+brew install dalfox
+
+## Enumeration
+brew install nmap
 brew install ffuf
+brew install wpscanteam/tap/wpscan
+brew install responder --cask
+
+## Password
+brew install hydra
+brew install hashcat
+brew install john #(JohnTheRipper)
+brew install john-jumbo #(Full version)
+brew unlink john #(`john` command should now work)
+brew install aircrack-ng # (for wireless)
+brew install hcxtools
+
+## Exploits
+brew install --cask metasploit
+brew install exploitdb # Use `searchsploit` command to check & install new exploits  
+brew install virustotal-cli # Use to analyse exploit in cli with `vi`
+
+## Wordlists
+brew install crunch
 
 ## Others
-brew install nmap
-brew install metasploit
 brew install exiftool
 brew install base64
 brew install curl
+brew install wget
 brew install jq
+brew install unzip
+brew install sevenzip
+brew install rar
+brew install --cask obsidian
+brew install chruby ruby-install
+ruby-install ruby # when using ruby always add '--user-install' behind command or just use sudo
+brew install perl #(to use .pl files)
+brew install xz
+brew install cpanminus
+cpanm Compress::Raw::Lzma
