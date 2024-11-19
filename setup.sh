@@ -92,6 +92,7 @@ https://formulae.brew.sh/cask/jetbrains-toolbox
 
 ### Visual Studio Code
 brew install --cask visual-studio-code
+defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false 
 
 ## MongoDB Compass
 brew install --cask mongodb-compass
@@ -111,15 +112,22 @@ brew install --cask insomnia
 brew install --cask tibco-jaspersoft-studio
 
 ## Other utils
+brew install --cask lulu # Firewall
 brew install --cask devtoys
+brew install --cask canva # Photoshop alternative
 brew install --cask raycast
+brew install --cask chatgpt # hostkey: shift command space
+brew install --cask keyclu # hostkey: option + option (hold)
 brew install --cask latest
+brew install --cask appcleaner
+brew install --cask onyx
 brew install only-switch
 brew install --cask alt-tab
 brew install MonitorControl
 brew install nikolaeu/numi/numi-cli
 brew install bash-completion # (bash completion)
 brew install --cask rar
+brew install --cask keka
 
 # Setup hacking tools
 # Checkout
@@ -138,6 +146,10 @@ brew install nmap
 brew install ffuf
 brew install wpscanteam/tap/wpscan
 brew install responder --cask
+# https://www.techrepublic.com/article/homebrew-how-to-install-reconnaissance-tools-on-macos/
+brew install gobuster
+
+brew install bettercap
 
 ## Password
 brew install hydra
@@ -151,12 +163,14 @@ brew install hcxtools
 ## Exploits
 brew install --cask metasploit
 brew install exploitdb # Use `searchsploit` command to check & install new exploits  
+brew install --cask armitage 
 brew install virustotal-cli # Use to analyse exploit in cli with `vi`
 
 ## Wordlists
 brew install crunch
 
 ## Others
+brew install tmux
 brew install exiftool
 brew install base64
 brew install curl
@@ -169,6 +183,7 @@ brew install --cask obsidian
 brew install chruby ruby-install
 ruby-install ruby # when using ruby always add '--user-install' behind command or just use sudo
 brew install perl #(to use .pl files)
+brew install php
 brew install xz
 brew install cpanminus
 cpanm Compress::Raw::Lzma
